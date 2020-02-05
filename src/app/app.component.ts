@@ -35,8 +35,6 @@ export class AppComponent implements OnInit {
         this.userViewableSections = this.userViewableSections.slice()
       break;
     }
-
-    console.log(this.userViewableSections)
   }
   
 }
