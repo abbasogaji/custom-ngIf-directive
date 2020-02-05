@@ -14,10 +14,12 @@ export class IsAuthorizedDirective implements OnInit, OnChanges{
   }
 
   ngOnChanges(){
+    console.log("Sectioned!!")
     this.configureView()
   }
 
   configureView(){
+      console.log(this.isAuthorized, this.isAuthorizedIn)
     const isAuthorized = this.isAuthorizedIn.some(i => i == this.isAuthorized)
 
     if (isAuthorized && !this.hasView) {
@@ -28,4 +30,5 @@ export class IsAuthorizedDirective implements OnInit, OnChanges{
         this.hasView = false;     
     }
   }
+
 }
